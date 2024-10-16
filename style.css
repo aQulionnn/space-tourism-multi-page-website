@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+
+:root {
+  --heading1-font: 150px 'Bellefair';
+  --heading2-font: 100px 'Bellefair';
+  --heading3-font: 56px 'Bellefair';
+  --heading4-font: 32px 'Bellefair';
+  --heading5-font: 28px 'Barlow Condensed';
+  --heading5-spacing: 4.75px;
+  --subheading1-font: 28px 'Bellefair';
+  --subheading2-font: 14px 'Barlow Condensed';
+  --subheading2-spacing: 2.35px;
+  --navbar-font: 16px 'Barlow Condensed';
+  --navbar-spacing: 2.7px;
+  --text-font: 18px 'Barlow';
+
+  --gray-color: #d0d6f9;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: white;
+  font: var(--text-font);
+}
+
+body {  
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(assets/home/background-home-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+header {
+  padding: calc(4.4%) 0 0 calc(3.8%);
+
+  display: flex;
+  align-items: center;
+}
+
+picture:hover {
+  cursor: pointer;
+}
+
+header div {
+  position: relative;
+  align-self: center;
+  left: calc(7.7%);
+
+  height: 1px;
+  width: calc(32.85%);
+  z-index: 1;
+
+  background-color: rgba(255, 255, 255, 25.15%);
+}
+
+nav {
+  margin-left: auto;
+  
+  display: flex;
+  justify-content: center;
+
+  gap: 4.58vw;
+  width: 57.64vw;
+  height: 10.6vh;
+
+  background-color: rgba(255, 255, 255, 4%);
+  backdrop-filter: blur(81.55px);
+}
+
+nav a {
+  display: flex; 
+  align-items: center;
+  gap: 5.4px;
+  height: 100%;
+
+  font: var(--navbar-font);
+  letter-spacing: var(--navbar-spacing);
+  text-decoration: none;
+}
+
+nav a span {
+  font-weight: bold;
+}
+
+nav a:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
+}
+
+
+main {
+  padding-top: 15vh;
+
+  display: flex;
+  width: 100vw;
+  height: calc(80%);
+}
+
+.left-section, .right-section {
+  width: 50%;
+  height: 100%;
+}
+
+.left-section {
+  padding: 7vh 12vw;
+}
+
+.left-section span {
+  font: var(--heading5-font);
+  letter-spacing: var(--heading5-spacing);
+  color: var(--gray-color);
+}
+
+.left-section h1 {
+  font: var(--heading1-font)
+}
+
+.left-section p {
+  font: var(--text-font);
+  color: var(--gray-color);
+}
+
+
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-section a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  
+  font: var(--heading4-font);
+  color: black;
+  text-decoration: none;
+
+  background-color: white;
+}
+
+.right-section a:hover {
+  box-shadow: 0 0 0 10vh rgba(255, 255, 255, 10.36%);
+
+  transition: ease 0.5s;
+}
