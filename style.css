@@ -38,7 +38,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
 header {
   padding: calc(4.4%) 0 0 calc(3.8%);
 
@@ -95,7 +94,6 @@ nav a:hover {
   border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
 }
 
-
 main {
   padding-top: 15vh;
 
@@ -128,7 +126,6 @@ main {
   color: var(--gray-color);
 }
 
-
 .right-section {
   display: flex;
   align-items: center;
@@ -154,4 +151,54 @@ main {
   box-shadow: 0 0 0 10vh rgba(255, 255, 255, 10.36%);
 
   transition: ease 0.5s;
+}
+
+@media (max-width: 1280px) {
+  body {
+    width: 100vw;
+    height: auto;
+
+    background: url(assets/home/background-home-tablet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  header {
+    padding: 0 0 0 calc(3.8%);
+  }
+
+  header div {
+    display: none;
+  }
+
+  nav a span {
+    display: none;
+  }
+
+  main {
+    padding-bottom: 5vh;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 100px;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .left-section {
+    padding: 7vh 24vw;
+    display: grid;
+    gap: 25px;
+  }
+
+  .right-section a {
+    width: 304px;
+  }
+
+  .right-section a:hover {
+    box-shadow: 0 0 0 5vh rgba(255, 255, 255, 10.36%);
+  }
 }
