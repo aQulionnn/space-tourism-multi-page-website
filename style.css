@@ -61,7 +61,7 @@ header div {
   background-color: rgba(255, 255, 255, 25.15%);
 }
 
-nav {
+header nav {
   margin-left: auto;
   
   display: flex;
@@ -94,21 +94,25 @@ nav a:hover {
   border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
 }
 
+nav a:focus {
+  border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
+}
+
 main {
-  padding-top: 15vh;
+  /* padding-top: 15vh; */
 
   display: flex;
   width: 100vw;
   height: calc(80%);
 }
 
-.left-section, .right-section {
+.left-section, .right-section-home {
   width: 50%;
   height: 100%;
 }
 
 .left-section {
-  padding: 7vh 12vw;
+  padding: 20vh 12vw;
 }
 
 .left-section span {
@@ -126,13 +130,13 @@ main {
   color: var(--gray-color);
 }
 
-.right-section {
+.right-section-home {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.right-section a {
+.right-section-home a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,7 +151,7 @@ main {
   background-color: white;
 }
 
-.right-section a:hover {
+.right-section-home a:hover {
   box-shadow: 0 0 0 10vh rgba(255, 255, 255, 10.36%);
 
   transition: ease 0.5s;
@@ -202,3 +206,25 @@ main {
     box-shadow: 0 0 0 5vh rgba(255, 255, 255, 10.36%);
   }
 }
+
+/* @media (max-width: 480px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: url(assets/home/background-home-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  header {
+    padding: 25px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    display: none;
+  }
+} */
