@@ -1,24 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap");
 
 :root {
-  --heading1-font: 150px 'Bellefair';
-  --heading2-font: 100px 'Bellefair';
-  --heading3-font: 56px 'Bellefair';
-  --heading4-font: 32px 'Bellefair';
-  --heading5-font: 28px 'Barlow Condensed';
-  --heading5-spacing: 4.75px;
-  --subheading1-font: 28px 'Bellefair';
-  --subheading2-font: 14px 'Barlow Condensed';
-  --subheading2-spacing: 2.35px;
-  --navbar-font: 16px 'Barlow Condensed';
+  --heading1-font-desktop: 150px "Bellefair";
+  --heading1-font-tablet: 150px "Bellefair";
+  --heading1-font-mobile: 80px "Bellefair";
+
+  --heading2-font-desktop: 100px "Bellefair";
+  --heading2-font-tablet: 80px "Bellefair";
+  --heading2-font-mobile: 56px "Bellefair";
+
+  --heading3-font-desktop: 56px "Bellefair";
+  --heading3-font-tablet: 40px "Bellefair";
+  --heading3-font-mobile: 24px "Bellefair";
+
+  --heading4-font-desktop: 32px "Bellefair";
+  --heading4-font-tablet: 24px "Bellefair";
+  --heading4-font-mobile: 16px "Bellefair";
+
+  --heading5-font-desktop: 28px "Barlow Condensed";
+  --heading5-font-tablet: 20px "Barlow Condensed";
+  --heading5-font-mobile: 16px "Barlow Condensed";
+  --heading5-spacing-desktop: 4.72px;
+  --heading5-spacing-tablet: 3.38px;
+  --heading5-spacing-mobile: 2.7px;
+
+  --subheading1-font: 28px "Bellefair";
+  
+  --subheading2-font: 14px "Barlow Condensed";
+  --subheading2-spacing: 2.36px;
+
+  --navbar-font: 16px "Barlow Condensed";
   --navbar-spacing: 2.7px;
-  --text-font: 18px 'Barlow';
+  
+  --text-font-desktop: 18px "Barlow";
+  --text-font-tablet: 16px "Barlow";
+  --text-font-mobile: 15px "Barlow";
 
   --gray-color: #d0d6f9;
 }
-
 
 * {
   margin: 0;
@@ -29,33 +50,26 @@
   font: var(--text-font);
 }
 
-body {  
-  width: 100vw;
-  height: 100vh;
+body {
+  max-width: 100dvw;
+  min-height: 100dvh;
 
-  background-image: url(assets/home/background-home-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 header {
-  padding: calc(4.4%) 0 0 calc(3.8%);
-
+  padding: 40px 0 0 55px;
   display: flex;
   align-items: center;
 }
 
-picture:hover {
-  cursor: pointer;
-}
-
 header div {
-  position: relative;
-  align-self: center;
-  left: calc(7.7%);
-
+  position: fixed;
+  right: 800px;
+  margin-left: auto;
   height: 1px;
-  width: calc(32.85%);
+  width: 473px;
   z-index: 1;
 
   background-color: rgba(255, 255, 255, 25.15%);
@@ -64,22 +78,24 @@ header div {
 header nav {
   margin-left: auto;
   
+  width: 830px;
+  height: 96px;
   display: flex;
   justify-content: center;
-
-  gap: 4.58vw;
-  width: 57.64vw;
-  height: 10.6vh;
+  gap: 48px;
 
   background-color: rgba(255, 255, 255, 4%);
   backdrop-filter: blur(81.55px);
 }
 
+nav a:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
+}
+
 nav a {
   display: flex; 
   align-items: center;
-  gap: 5.4px;
-  height: 100%;
+  gap: 11px;
 
   font: var(--navbar-font);
   letter-spacing: var(--navbar-spacing);
@@ -90,16 +106,38 @@ nav a span {
   font-weight: bold;
 }
 
-nav a:hover {
-  border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
+@media (min-width: 1024px) and (orientation: landscape) {
+  body {   
+    background-image: url(assets/home/background-home-desktop.jpg);
+  }
 }
 
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    background-image: url(assets/home/background-home-tablet.jpg);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image: url(assets/home/background-home-mobile.jpg);
+  }
+}
+
+
+
+/* 
+
+picture:hover {
+  cursor: pointer;
+}
+  
 nav a:focus {
   border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
 }
 
 main {
-  /* padding-top: 15vh; */
+  
 
   display: flex;
   width: 100vw;
@@ -155,9 +193,13 @@ main {
   box-shadow: 0 0 0 10vh rgba(255, 255, 255, 10.36%);
 
   transition: ease 0.5s;
-}
+} */
 
-@media (max-width: 1280px) {
+
+
+
+
+/* @media (max-width: 1280px) {
   body {
     width: 100vw;
     height: auto;
@@ -205,7 +247,7 @@ main {
   .right-section a:hover {
     box-shadow: 0 0 0 5vh rgba(255, 255, 255, 10.36%);
   }
-}
+} */
 
 /* @media (max-width: 480px) {
   body {
