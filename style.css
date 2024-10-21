@@ -143,7 +143,7 @@ main {
   }
 }
 
-@media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait){
   body {
     background-image: url(assets/home/background-home-tablet.jpg);
   }
@@ -171,6 +171,12 @@ main {
 
   nav a span {
     display: none;
+  }
+
+  main {
+    display: grid;
+    gap: 156px;
+    padding: 106px 0 90px;
   }
 }
 

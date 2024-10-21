@@ -15,12 +15,12 @@ const handleLocation = async () => {
   const route = routes[path]
   const html = await fetch(route).then((data) => data.text())
   document.getElementById('main').innerHTML = html
-  if (path == '/'){
-    document.body.style.backgroundImage = "url(assets/home/background-home-desktop.jpg)"
-  }
-  else {
-    document.body.style.backgroundImage = "url('/assets/destination/background-destination-desktop.jpg')"
-  }
+  // if (path == '/'){
+  //   document.body.style.backgroundImage = "url(assets/home/background-home-desktop.jpg)"
+  // }
+  // else {
+  //   document.body.style.backgroundImage = "url('/assets/destination/background-destination-desktop.jpg')"
+  // }
 }
 
 window.onpopstate = handleLocation
