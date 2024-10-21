@@ -32,7 +32,11 @@
   --subheading2-spacing: 2.36px;
 
   --navbar-font: 16px "Barlow Condensed";
+  --navbar-font-tablet: 14px "Barlow Condensed";
+  --navbar-font-mobile: 16px "Barlow Condensed";
   --navbar-spacing: 2.7px;
+  --navbar-spacing-tablet: 2.36px;
+  --navbar-spacing-mobile: 2.7px;
   
   --text-font-desktop: 18px "Barlow";
   --text-font-tablet: 16px "Barlow";
@@ -48,6 +52,8 @@
 
   color: white;
   font: var(--text-font);
+
+  /* border: 1px solid green; */
 }
 
 body {
@@ -59,62 +65,99 @@ body {
 }
 
 header {
-  padding: 40px 0 0 55px;
   display: flex;
   align-items: center;
-}
-
-header div {
-  position: fixed;
-  right: 800px;
-  margin-left: auto;
-  height: 1px;
-  width: 473px;
-  z-index: 1;
-
-  background-color: rgba(255, 255, 255, 25.15%);
 }
 
 header nav {
   margin-left: auto;
   
-  width: 830px;
-  height: 96px;
   display: flex;
-  justify-content: center;
-  gap: 48px;
 
   background-color: rgba(255, 255, 255, 4%);
   backdrop-filter: blur(81.55px);
 }
 
-nav a:hover {
-  border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
-}
-
 nav a {
   display: flex; 
   align-items: center;
-  gap: 11px;
 
-  font: var(--navbar-font);
-  letter-spacing: var(--navbar-spacing);
   text-decoration: none;
 }
 
-nav a span {
-  font-weight: bold;
-}
+
 
 @media (min-width: 1024px) and (orientation: landscape) {
   body {   
     background-image: url(assets/home/background-home-desktop.jpg);
+  }
+
+  header {
+    padding: 40px 0 0 55px;
+  }
+
+  header > span {
+    position: fixed;
+    right: 800px;
+    margin-left: auto;
+    height: 1px;
+    width: 473px;
+    z-index: 1;
+  
+    background-color: rgba(255, 255, 255, 25.15%);
+  }
+
+  header nav {
+    width: 830px;
+    height: 96px;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  nav a:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
+  }
+
+  nav a {
+    gap: 11px;
+
+    font: var(--navbar-font);
+    letter-spacing: var(--navbar-spacing);
+  }
+
+  nav a span {
+    font-weight: bold;
   }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
   body {
     background-image: url(assets/home/background-home-tablet.jpg);
+  }
+
+  header {
+    padding: 0 0 0 39px;
+    display: flex;
+    align-items: center;
+  }
+  
+  header > span {
+    display: none;
+  }
+
+  header nav {
+    width: 450px;
+    height: 96px;
+    justify-content: space-evenly;
+  }
+
+  nav a {
+    font: var(--navbar-font-tablet);
+    letter-spacing: var(--navbar-spacing-tablet);
+  }
+
+  nav a span {
+    display: none;
   }
 }
 
