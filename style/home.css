@@ -1,0 +1,58 @@
+.left-section, .right-section {
+  width: 50dvw;
+}
+
+.left-section {
+  display: flex;
+}
+
+.left-section article {
+  display: grid;
+  gap: 24px;
+  width: 450px;
+  height: 382px;
+}
+
+.left-section article span {
+  font: var(--heading5-font-desktop);
+  letter-spacing: (--heading5-spacing-desktop);
+  color: var(--gray-color);
+}
+
+.left-section article h1 {
+  font: var(--heading1-font-desktop);
+}
+
+.left-section article p {
+  font: var(--text-font-desktop);
+  color: var(--gray-color);
+  line-height: 32px;
+}
+
+.right-section {
+  display: flex;
+  justify-content: end;
+}
+
+.right-section div:hover {
+  box-shadow: 0 0 0 88px rgba(255, 255, 255, 10.33%);
+  cursor: pointer;
+}
+
+.right-section div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  background-color: white;
+
+  transition: 0.5s;
+}
+
+.right-section a {
+  font: var(--heading4-font-desktop);
+  text-decoration: none;
+  color: black;
+}
