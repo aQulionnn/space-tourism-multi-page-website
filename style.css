@@ -222,6 +222,12 @@ main {
     font: var(--navbar-font-mobile);
     letter-spacing: var(--navbar-spacing-mobile);
   }
+
+  main {
+    display: grid;
+    gap: 81px;
+    padding: 112px 24px 0;
+  }
 }
 
 
