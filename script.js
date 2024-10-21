@@ -27,3 +27,22 @@
 // window.route = route
 
 // handleLocation()
+
+var isNavbarOpened = false 
+
+const navbar = document.getElementById('navbar')
+const openNavberIcon = document.getElementById('open-navbar')
+
+const openNavbar = () => {
+  console.log(isNavbarOpened)
+  if (isNavbarOpened == false){
+    navbar.style.display = 'grid'
+    openNavberIcon.style.backgroundImage = "url(assets/shared/icon-close.svg)"
+    isNavbarOpened = true
+  }
+  else {
+    navbar.style.display = 'none'
+    openNavberIcon.style.backgroundImage = "url(assets/shared/icon-hamburger.svg)"
+    isNavbarOpened = false
+  }
+}

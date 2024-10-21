@@ -69,6 +69,11 @@ header {
   align-items: center;
 }
 
+header picture {
+  width: 48px;
+  height: 48px;
+}
+
 header nav {
   margin-left: auto;
   
@@ -84,8 +89,6 @@ nav a {
 
   text-decoration: none;
 }
-
-
 
 @media (min-width: 1024px) and (orientation: landscape) {
   body {   
@@ -164,6 +167,44 @@ nav a {
 @media (max-width: 480px) {
   body {
     background-image: url(assets/home/background-home-mobile.jpg);
+  }
+
+  header picture {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+
+  header nav { 
+    display: none;
+  }
+
+  header > span {
+    position: absolute;
+    top: 33px;
+    right: 24px;
+    z-index: 1;
+
+    width: 24px;
+    height: 21px;
+    background-image: url(assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+  }
+
+  header nav {
+    padding: 118px 0 60dvh 32px;
+    align-items: center;
+
+    width: 254px;
+    height: 100dvh;
+  }
+
+  nav a {
+    gap: 11px;
+    height: 19px;
+
+    font: var(--navbar-font-mobile);
+    letter-spacing: var(--navbar-spacing-mobile);
   }
 }
 
