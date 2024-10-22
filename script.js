@@ -6,8 +6,7 @@ const route = (event) => {
 }
 
 const routes = {
-  // '/': '/pages/home.html',
-  '/': '/pages/destination/destination-moon.html',
+  '/': '/pages/home.html',
   '/destination': '/pages/destination/destination-moon.html'
 }
 
@@ -16,11 +15,27 @@ const handleLocation = async () => {
   const route = routes[path]
   const html = await fetch(route).then((data) => data.text())
   document.getElementById('main').innerHTML = html
-  if (path == '/destination' && window.innerWidth > 1024){
-    document.body.style.backgroundImage = "url(assets/home/background-home-desktop.jpg)"
+  if (path == '/'){
+    if (window.innerWidth > 1024) {
+      document.body.style.backgroundImage = "url(assets/home/background-home-desktop.jpg)"
+    }
+    else if (window.innerWidth > 480 && window.innerWidth < 1024) {
+      document.body.style.backgroundImage = "url(assets/home/background-home-tablet.jpg)"
+    }
+    else if (window.innerWidth < 481) {
+      document.body.style.backgroundImage = "url(assets/home/background-home-mobile.jpg)"
+    }
   }
-  else if (path == '/' && window.innerWidth > 1024) {
-    document.body.style.backgroundImage = "url('/assets/destination/background-destination-desktop.jpg')"
+  else if (path == '/destination') {
+    if (window.innerWidth > 1024) {
+      document.body.style.backgroundImage = "url('/assets/destination/background-destination-desktop.jpg')"
+    }
+    else if (window.innerWidth > 480 && window.innerWidth < 1024) {
+      document.body.style.backgroundImage = "url('/assets/destination/background-destination-tablet.jpg')"
+    }
+    else if (window.innerWidth < 481) {
+      document.body.style.backgroundImage = "url('/assets/destination/background-destination-mobile.jpg')"
+    }
   }
 }
 
