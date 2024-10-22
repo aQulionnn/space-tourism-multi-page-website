@@ -1,111 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+@media (min-width: 1024px) and (orientation: landscape) {
+  .main {
+    display: flex;
+    width: 100%;
+    gap: 157px;
+    margin-bottom: -19px;
+  }
 
-:root {
-  --heading1-font: 150px 'Bellefair';
-  --heading2-font: 100px 'Bellefair';
-  --heading3-font: 56px 'Bellefair';
-  --heading4-font: 32px 'Bellefair';
-  --heading5-font: 28px 'Barlow Condensed';
-  --heading5-spacing: 4.75px;
-  --subheading1-font: 28px 'Bellefair';
-  --subheading2-font: 14px 'Barlow Condensed';
-  --subheading2-spacing: 2.35px;
-  --navbar-font: 16px 'Barlow Condensed';
-  --navbar-spacing: 2.7px;
-  --text-font: 18px 'Barlow';
+  .left-section, .right-section {
+    width: 50%;
+  }
 
-  --gray-color: #383b4b;
-  --light-gray-color: #d0d6f9;
+  .left-section {
+    display: grid;
+    gap: 97px;
+    text-align: start;
+  }
+
+  .left-section h5 {
+    font: var(--heading5-font-desktop);
+    letter-spacing: var(--heading5-spacing-desktop);
+  }
+
+  .left-section h5 span {
+    font-weight: bold;
+    opacity: 25%;
+  }
+
+  .left-section picture {
+    margin-left: auto;
+    width: 445px;
+    height: 445px;
+  }
+
+  .right-section {
+    align-self: flex-end;
+
+    display: grid;
+    align-items: end;
+    width: 445px;
+    height: 472px;
+  }
+
+  .right-section nav {
+    display: flex;
+    gap: 36px;
+  }
+
+  .right-section nav a:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .right-section nav a {
+    font: var(--navbar-font-desktop);
+    text-decoration: none;
+  }
+
+  .right-section article h1 {
+    font: var(--heading2-font-desktop)
+  }
+
+  .right-section article p {
+    font: var(--text-font-desktop);
+    color: var(--gray-color);
+    line-height: 32px;
+  }
+
+  .right-section .line {
+    width: 444px;
+    height: 1px;
+    background-color: var(--darkGray-color);
+  }
+
+  .right-section footer {
+    display: flex;
+    gap: 81px;
+  }
+
+  .right-section footer div {
+    display: grid;
+    gap: 11px;
+  }
+
+  .right-section footer p {
+    font: var(--subheading2-font);
+    letter-spacing: var(--subheading2-spacing);
+  }
+
+  .right-section footer span {
+    font: var(--subheading1-font);
+  }
 }
 
-.left-section, .right-section {
-  width: 50%;
-  height: 100%;
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+
 }
 
-.left-section {
-  padding: 0 5vw 0 5vw;
-  display: grid;
-  justify-content: end;
-  align-items: center;
-  text-align: start;
-}
+@media (max-width: 480px) {
 
-.left-section div {
-  font: var(--heading5-font);
-  letter-spacing: var(--heading5-spacing);
-}
-
-.left-section div span {
-  font-weight: bold;
-  opacity: 25%;
-}
-
-.right-section {
-  padding: 5vh 6vw 5vh 6vw;
-
-  display: grid;
-  text-align: start;
-  justify-items: start;
-}
-
-.right-section > nav {
-  width: 100%;
-  display: flex;
-  justify-content: start;
-
-  gap: 4.58vw;
-  /* height: 10.6vh; */
-
-  background-color: transparent;
-}
-
-.right-section nav a {
-  display: flex; 
-  align-items: center;
-  gap: 5.4px;
-  height: 100%;
-
-  font: var(--navbar-font);
-  letter-spacing: var(--navbar-spacing);
-  text-decoration: none;
-}
-
-.right-section h1 {
-  font: var(--heading2-font)
-}
-
-.right-section p {
-  font: var(--text-font);
-  color: var(--light-gray-color);
-  line-height: 32px;
-}
-
-.line {
-  width: 90%;
-  height: 1px;
-  background-color: var(--gray-color);
-}
-
-.bottom-section {
-  display: flex;
-  width: 100%;
-}
-
-.distance, .travel-time {
-  display: grid;
-  gap: 10px;
-  width: 50%;
-  height: auto;
-}
-
-.distance p, .travel-time p{
-  font: var(--subheading2-font);
-  letter-spacing: var(--subheading2-spacing);
-}
-
-.distance span, .travel-time span {
-  font: var(--subheading1-font);
 }

@@ -120,7 +120,6 @@
   }
 
   .left-section article {
-    /* justify-content: center; */
     display: grid;
     gap: 16px;
     width: 327px;

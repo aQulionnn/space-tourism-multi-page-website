@@ -6,7 +6,8 @@ const route = (event) => {
 }
 
 const routes = {
-  '/': '/pages/home.html',
+  // '/': '/pages/home.html',
+  '/': '/pages/destination/destination-moon.html',
   '/destination': '/pages/destination/destination-moon.html'
 }
 
@@ -15,10 +16,10 @@ const handleLocation = async () => {
   const route = routes[path]
   const html = await fetch(route).then((data) => data.text())
   document.getElementById('main').innerHTML = html
-  if (path == '/' && window.innerWidth > 1024){
+  if (path == '/destination' && window.innerWidth > 1024){
     document.body.style.backgroundImage = "url(assets/home/background-home-desktop.jpg)"
   }
-  else if (path == '/destination' && window.innerWidth > 1024) {
+  else if (path == '/' && window.innerWidth > 1024) {
     document.body.style.backgroundImage = "url('/assets/destination/background-destination-desktop.jpg')"
   }
 }
