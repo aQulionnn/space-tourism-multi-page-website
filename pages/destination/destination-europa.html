@@ -1,38 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="../../style/destination.css" />
 </head>
-<body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+<style>
+  #europa {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+</style>
 
-  01 Pick your destination
+<div class="main">
+  <section class="left-section">
+    <h5>
+      <span>01</span>
+      PICK YOUR DESTINATION
+    </h5>
+    <picture>
+      <img src="../../assets/destination/image-europa.png" alt="" />
+    </picture>
+  </section>
+  <section class="right-section">
+    <header>
+      <nav>
+        <a onclick="route()" href="/destination-moon">MOON</a>
+        <a onclick="route()" href="/destination-mars">MARS</a>
+        <a onclick="route()" href="/destination-europa" id="europa">EUROPA</a>
+        <a onclick="route()" href="/destination-titan">TITAN</a>
+      </nav>
+    </header>
+    <article>
+      <h1>EUROPA</h1>
+      <p>
+        The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+        winter lover’s dream. With an icy surface, it’s perfect for a bit of ice
+        skating, curling, hockey, or simple relaxation in your snug
+      </p>
+    </article>
+    <span class="line"></span>
+    <footer>
+      <div class="distance">
+        <p>AVG. DISTANCE</p>
+        <span>628 MIL. KM</span>
+      </div>
+      <div class="travel-time">
+        <p>EST. TRAVEL TIME</p>
+        <span>3 YEARS</span>
+      </div>
+    </footer>
+  </section>
+</div>
 
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Europa
-
-  The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
-  winter lover’s dream. With an icy surface, it’s perfect for a bit of 
-  ice skating, curling, hockey, or simple relaxation in your snug 
-  wintery cabin.
-
-  Avg. distance
-  628 mil. km
-
-  Est. travel time
-  3 years
-</body>
-</html>

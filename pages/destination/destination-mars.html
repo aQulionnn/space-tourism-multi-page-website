@@ -1,4 +1,56 @@
 <head>
+  <link rel="stylesheet" href="../../style/destination.css" />
+</head>
+
+<style>
+  #mars {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+</style>
+
+<div class="main">
+  <section class="left-section">
+    <h5>
+      <span>01</span>
+      PICK YOUR DESTINATION
+    </h5>
+    <picture>
+      <img src="../../assets/destination/image-mars.png" alt="" />
+    </picture>
+  </section>
+  <section class="right-section">
+    <header>
+      <nav>
+        <a onclick="route()" href="/destination-moon">MOON</a>
+        <a onclick="route()" href="/destination-mars" id="mars">MARS</a>
+        <a onclick="route()" href="/destination-europa">EUROPA</a>
+        <a onclick="route()" href="/destination-titan">TITAN</a>
+      </nav>
+    </header>
+    <article>
+      <h1>MARS</h1>
+      <p>
+        Don’t forget to pack your hiking boots. You’ll need them to tackle
+        Olympus Mons, the tallest planetary mountain in our solar system. It’s
+        two and a half times the size of Everest!
+      </p>
+    </article>
+    <span class="line"></span>
+    <footer>
+      <div class="distance">
+        <p>AVG. DISTANCE</p>
+        <span>225 MIL. KM</span>
+      </div>
+      <div class="travel-time">
+        <p>EST. TRAVEL TIME</p>
+        <span>9 MONTH</span>
+      </div>
+    </footer>
+  </section>
+</div>
+
+<!-- <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,4 +81,4 @@
 
   Est. travel time
   9 months
-</div>
+</div> -->

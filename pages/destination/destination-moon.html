@@ -2,6 +2,13 @@
   <link rel="stylesheet" href="../../style/destination.css" />
 </head>
 
+<style>
+  #moon {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+</style>
+
 <div class="main">
   <section class="left-section">
     <h5>
@@ -15,10 +22,10 @@
   <section class="right-section">
     <header>
       <nav>
-        <a href="">MOON</a>
-        <a href="">MARS</a>
-        <a href="">EUROPA</a>
-        <a href="">TITAN</a>
+        <a onclick="route()" href="/destination-moon" id="moon">MOON</a>
+        <a onclick="route()" href="/destination-mars">MARS</a>
+        <a onclick="route()" href="/destination-europa">EUROPA</a>
+        <a onclick="route()" href="/destination-titan">TITAN</a>
       </nav>
     </header>
     <article>

@@ -47,12 +47,13 @@
   }
 
   .right-section nav a:hover {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 50%);
   }
 
   .right-section nav a {
     font: var(--navbar-font-desktop);
     text-decoration: none;
+    color: var(--gray-color);
   }
 
   .right-section article h1 {
@@ -147,6 +148,7 @@
   .right-section nav a {
     font: var(--navbar-font-tablet);
     text-decoration: none;
+    color: var(--gray-color);
   }
 
   .right-section article {
@@ -247,6 +249,7 @@
   .right-section nav a {
     font: var(--navbar-font-mobile);
     text-decoration: none;
+    color: var(--gray-color);
   }
 
   .right-section article {

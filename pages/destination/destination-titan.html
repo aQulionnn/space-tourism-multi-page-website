@@ -1,37 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="../../style/destination.css" />
 </head>
-<body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+<style>
+  #titan {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+</style>
 
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Titan
-
-  The only moon known to have a dense atmosphere other than Earth, Titan 
-  is a home away from home (just a few hundred degrees colder!). As a 
-  bonus, you get striking views of the Rings of Saturn.
-
-  Avg. distance
-  1.6 bil. km
-
-  Est. travel time
-  7 years
-</body>
-</html>
+<div class="main">
+  <section class="left-section">
+    <h5>
+      <span>01</span>
+      PICK YOUR DESTINATION
+    </h5>
+    <picture>
+      <img src="../../assets/destination/image-titan.png" alt="" />
+    </picture>
+  </section>
+  <section class="right-section">
+    <header>
+      <nav>
+        <a onclick="route()" href="/destination-moon">MOON</a>
+        <a onclick="route()" href="/destination-mars">MARS</a>
+        <a onclick="route()" href="/destination-europa">EUROPA</a>
+        <a onclick="route()" href="/destination-titan" id="titan">TITAN</a>
+      </nav>
+    </header>
+    <article>
+      <h1>TITAN</h1>
+      <p>
+        The only moon known to have a dense atmosphere other than Earth, Titan
+        is a home away from home (just a few hundred degrees colder!). As a
+        bonus, you get striking views of the Rings of Saturn.
+      </p>
+    </article>
+    <span class="line"></span>
+    <footer>
+      <div class="distance">
+        <p>AVG. DISTANCE</p>
+        <span>1.6 BIL. KM</span>
+      </div>
+      <div class="travel-time">
+        <p>EST. TRAVEL TIME</p>
+        <span>7 YEARS</span>
+      </div>
+    </footer>
+  </section>
+</div>
