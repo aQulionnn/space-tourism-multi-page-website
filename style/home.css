@@ -33,7 +33,7 @@
   
   .right-section div:hover {
     box-shadow: 0 0 0 88px rgba(255, 255, 255, 10.33%);
-    cursor: pointer;
+    cursor: url('../assets/shared/icon-cursor.svg'), auto;
   }
   
   .right-section div {
@@ -48,10 +48,16 @@
     transition: 0.5s;
   }
   
+  .right-section div a:hover {
+    cursor: url('../assets/shared/icon-cursor.svg'), auto;
+  }
+
   .right-section div a {
+    z-index: 100;
     font: var(--heading4-font-desktop);
     text-decoration: none;
     color: black;
+    cursor: url('assets/shared/icon-cursor.svg'), auto;
   }
 }
 

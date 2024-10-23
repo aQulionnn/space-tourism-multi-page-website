@@ -11,6 +11,10 @@ const routes = {
   "/destination-mars": "/pages/destination/destination-mars.html",
   "/destination-europa": "/pages/destination/destination-europa.html",
   "/destination-titan": "/pages/destination/destination-titan.html",
+  "/crew-commander": "/pages/crew/crew-commander.html",
+  "/crew-specialist": "/pages/crew/crew-specialist.html",
+  "/crew-pilot": "/pages/crew/crew-pilot.html",
+  "/crew-engineer": "/pages/crew/crew-engineer.html"
 }
 
 // const routes = {
@@ -34,7 +38,6 @@ const handleLocation = async () => {
         "url(assets/home/background-home-mobile.jpg)"
     }
   }
-   
   else if 
   (
     path == "/destination-moon" ||
@@ -52,6 +55,25 @@ const handleLocation = async () => {
     } else if (window.innerWidth < 481) {
       document.body.style.backgroundImage =
         "url('/assets/destination/background-destination-mobile.jpg')"
+    }
+  }
+  else if 
+  (
+    path == "/crew-commander" ||
+    path == "/crew-specialist" ||
+    path == "/crew-pilot" ||
+    path == "/crew-engineer"
+  ) 
+  {
+    if (window.innerWidth > 1024) {
+      document.body.style.backgroundImage =
+        "url('/assets/crew/background-crew-desktop.jpg')"
+    } else if (window.innerWidth > 480 && window.innerWidth < 1024) {
+      document.body.style.backgroundImage =
+        "url('/assets/crew/background-crew-tablet.jpg')"
+    } else if (window.innerWidth < 481) {
+      document.body.style.backgroundImage =
+        "url('/assets/crew/background-crew-mobile.jpg')"
     }
   }
 }

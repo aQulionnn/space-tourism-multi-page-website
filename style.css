@@ -123,6 +123,7 @@ main {
 
   .navbar a:hover {
     border-bottom: 3px solid rgba(255, 255, 255, 50.21%);
+    cursor: url('assets/shared/icon-cursor.svg'), auto;
   }
 
   .navbar a {

@@ -1,0 +1,236 @@
+@media (min-width: 1024px) and (orientation: landscape) {
+  .main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
+  .left-section {
+    display: grid;
+    height: 100%;
+  }
+
+  .left-section header {
+    margin-bottom: 154px;
+  }
+
+  .left-section header h5 {
+    font: var(--heading5-font-desktop);
+    letter-spacing: var(--heading5-spacing-desktop);
+  }
+
+  .left-section header h5 span {
+    font-weight: bold;
+    opacity: 25%;
+  }
+
+  .left-section article {
+    text-align: start;
+  }
+
+  .left-section article h4 {
+    font: var(--heading4-font-desktop);
+    opacity: 50.42%;
+  }
+
+  .left-section article h3 {
+    margin: 15px 0 24px;
+    font: var(--heading3-font-desktop);
+  }
+
+  .left-section article p {
+    font: var(--text-font-desktop);
+    color: var(--gray-color);
+    line-height: 32px;
+    width: 444px;
+  }
+
+  .left-section footer {
+    margin-top: 120px;
+  }
+
+  .left-section footer nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  .left-section footer div:hover {
+    background-color: rgba(255, 255, 255, 50.01%);
+    cursor: url("../assets/shared/icon-cursor.svg"), auto;
+  }
+
+  .left-section footer nav div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 17.44%);
+  }
+
+  .right-section {
+    position: absolute;
+    bottom: 0%;
+    left: 800px;
+  }
+
+  .right-section picture img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+  .main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+  }
+
+  .left-section header {
+    margin: -66px 0 60px;
+    margin-left: 38.5px;
+  }
+
+  .left-section header h5 {
+    font: var(--heading5-font-tablet);
+    letter-spacing: var(--heading5-spacing-tablet);
+  }
+
+  .left-section header h5 span {
+    font-weight: bold;
+    opacity: 25%;
+  }
+
+  .left-section article {
+    display: grid;
+    justify-self: center;
+    width: 458px;
+    height: 182px;
+    text-align: center;
+  }
+
+  .left-section article h4 {
+    font: var(--heading4-font-tablet);
+    opacity: 50.42%;
+  }
+
+  .left-section article h3 {
+    font: var(--heading3-font-tablet);
+  }
+
+  .left-section article p {
+    font: var(--text-font-tablet);
+    color: var(--gray-color);
+    line-height: 28px;
+  }
+
+  .left-section footer {
+    margin-top: 40px;
+    justify-self: center;
+  }
+
+  .left-section footer nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  .left-section footer nav div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 17.44%);
+  }
+
+  .right-section {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .right-section picture img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+  }
+
+  .left-section header {
+    margin: -24px 0 0px;
+    text-align: center;
+    margin-bottom: 287px;
+  }
+
+  .left-section header h5 {
+    font: var(--heading5-font-mobile);
+    letter-spacing: var(--heading5-spacing-mobile);
+  }
+
+  .left-section header h5 span {
+    font-weight: bold;
+    opacity: 25%;
+  }
+
+  .left-section article {
+    display: grid;
+    justify-self: center;
+    width: 327px;
+    height: 170px;
+    text-align: center;
+  }
+
+  .left-section article h4 {
+    margin: 32px 0 8px;
+    font: var(--heading4-font-mobile);
+    opacity: 50.42%;
+  }
+
+  .left-section article h3 {
+    margin-bottom: 16px;
+    font: var(--heading3-font-mobile);
+  }
+
+  .left-section article p {
+    font: var(--text-font-mobile);
+    color: var(--gray-color);
+    line-height: 25px;
+  }
+
+  .left-section footer {
+    position: absolute;
+    top: 394px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .left-section footer nav {
+    display: flex;
+    gap: 16px;
+  }
+
+  .left-section footer nav div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 17.44%);
+  }
+
+  .right-section {
+    position: absolute;
+    top: 139px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .right-section picture img {
+    width: 100%;
+    height: 100%;
+  }
+}
