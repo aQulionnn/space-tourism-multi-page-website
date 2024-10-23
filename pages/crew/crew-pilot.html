@@ -1,28 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="../../style/crew.css" />
 </head>
-<body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+<style>
+  #pilot {
+    background-color: white;
+  }
 
-  02 Meet your crew
+  @media (min-width: 1024px) and (orientation: landscape) {
+    .right-section picture {
+      width: 554.39px;
+      height: 681px;
+    }
+  }
 
-  Pilot
-  Victor Glover
+  @media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+    .right-section picture {
+      width: 433.09px;
+      height: 532px;
+    }
+  }
 
-  Pilot on the first operational flight of the SpaceX Crew Dragon to the 
-  International Space Station. Glover is a commander in the U.S. Navy where 
-  he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
-  station systems flight engineer. 
-</body>
-</html>
+  @media (max-width: 480px) {
+    .right-section {
+      width: 180.73px;
+      height: 222px;
+    }
+  }
+</style>
+
+<div class="main">
+  <section class="left-section">
+    <header>
+      <h5><span>02</span> MEET YOUR CREW</h5>
+    </header>
+    <article>
+      <h4>PILOT</h4>
+      <h3>VICTOR GLOVER</h3>
+      <p>
+        Pilot on the first operational flight of the SpaceX Crew Dragon to the
+        International Space Station. Glover is a commander in the U.S. Navy
+        where he pilots an F/A-18.He was a crew member of Expedition 64, and
+        served as a station systems flight engineer.
+      </p>
+    </article>
+    <footer>
+      <nav>
+        <a onclick="route()" href="/crew-commander"></a>
+        <a onclick="route()" href="/crew-specialist"></a>
+        <a onclick="route()" href="/crew-pilot" id="pilot"></a>
+        <a onclick="route()" href="/crew-engineer"></a>
+      </nav>
+    </footer>
+  </section>
+  <section class="right-section">
+    <picture>
+      <img src="../../assets/crew/image-victor-glover.png" alt="" />
+    </picture>
+  </section>
+</div>

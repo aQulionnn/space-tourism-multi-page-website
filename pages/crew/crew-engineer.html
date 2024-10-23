@@ -1,14 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="../../style/crew.css" />
 </head>
-<body>
+
+<style>
+  #engineer {
+    background-color: white;
+  }
+
+  @media (min-width: 1024px) and (orientation: landscape) {
+    .right-section picture {
+      width: 615.57px;
+      height: 607px;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+    .right-section picture {
+      width: 539.51px;
+      height: 532px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .right-section {
+      width: 226.15px;
+      height: 223px;
+    }
+  }
+</style>
+
+<div class="main">
+  <section class="left-section">
+    <header>
+      <h5><span>02</span> MEET YOUR CREW</h5>
+    </header>
+    <article>
+      <h4>FLIGHT ENGINEER</h4>
+      <h3>ANOUSHEH ANSARI</h3>
+      <p>
+        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+        and former NASA astronaut. He launched into space for the third time as
+        commander of Crew Dragon Demo-2.
+      </p>
+    </article>
+    <footer>
+      <nav>
+        <a onclick="route()" href="/crew-commander"></a>
+        <a onclick="route()" href="/crew-specialist"></a>
+        <a onclick="route()" href="/crew-pilot"></a>
+        <a onclick="route()" href="/crew-engineer" id="engineer"></a>
+      </nav>
+    </footer>
+  </section>
+  <section class="right-section">
+    <picture>
+      <img src="../../assets/crew/image-anousheh-ansari.png" alt="" />
+    </picture>
+  </section>
+</div>
+
+
+<!-- <body>
 
   00 Home
   01 Destination
@@ -24,4 +76,4 @@
   Ansari was the fourth self-funded space tourist, the first self-funded woman to 
   fly to the ISS, and the first Iranian in space. 
 </body>
-</html>
+-->
