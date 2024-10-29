@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/test.css" />
+  </head>
+  <body>
+    <button class="left" onclick="toHomePage()">x</button>
+    <div class="quiz-container">
+      <h2 class="quiz-title">Space Quiz</h2>
+
+      <div class="question" id="q1">
+        <p>1. Which moon has an icy surface suitable for winter activities?</p>
+        <ul class="options">
+          <li><input type="radio" name="q1" value="A" /> Europa</li>
+          <li><input type="radio" name="q1" value="B" /> Titan</li>
+          <li><input type="radio" name="q1" value="C" /> Moon</li>
+        </ul>
+      </div>
+
+      <div class="question" id="q2">
+        <p>2. What is the estimated travel time to Mars?</p>
+        <ul class="options">
+          <li><input type="radio" name="q2" value="A" /> 9 months</li>
+          <li><input type="radio" name="q2" value="B" /> 3 years</li>
+          <li><input type="radio" name="q2" value="C" /> 3 days</li>
+        </ul>
+      </div>
+
+      <div class="question" id="q3">
+        <p>3. What’s the average distance to the Moon?</p>
+        <ul class="options">
+          <li><input type="radio" name="q3" value="A" /> 384,400 KM</li>
+          <li><input type="radio" name="q3" value="B" /> 225 MIL. KM</li>
+          <li><input type="radio" name="q3" value="C" /> 1.6 BIL. KM</li>
+        </ul>
+      </div>
+
+      <div class="question" id="q4">
+        <p>
+          4. Which planetary feature is two and a half times the size of
+          Everest?
+        </p>
+        <ul class="options">
+          <li><input type="radio" name="q4" value="A" /> Olympus Mons</li>
+          <li><input type="radio" name="q4" value="B" /> Titan's Peaks</li>
+          <li><input type="radio" name="q4" value="C" /> Luna Crater</li>
+        </ul>
+      </div>
+
+      <div class="question" id="q5">
+        <p>5. Where would you find a space gym and cinema onboard?</p>
+        <ul class="options">
+          <li><input type="radio" name="q5" value="A" /> Space Capsule</li>
+          <li><input type="radio" name="q5" value="B" /> Spaceport</li>
+          <li><input type="radio" name="q5" value="C" /> Launch Vehicle</li>
+        </ul>
+      </div>
+
+      <div class="question" id="q6">
+        <p>6. Which moon has a dense atmosphere like Earth?</p>
+        <ul class="options">
+          <li><input type="radio" name="q6" value="A" /> Titan</li>
+          <li><input type="radio" name="q6" value="B" /> Europa</li>
+          <li><input type="radio" name="q6" value="C" /> Moon</li>
+        </ul>
+      </div>
+
+      <div class="question" id="q7">
+        <p>
+          7. What’s the name of the most powerful rocket currently in operation?
+        </p>
+        <ul class="options">
+          <li><input type="radio" name="q7" value="A" /> WEB-X</li>
+          <li><input type="radio" name="q7" value="B" /> Falcon Heavy</li>
+          <li><input type="radio" name="q7" value="C" /> Saturn V</li>
+        </ul>
+      </div>
+
+      <div class="question" id="q8">
+        <p>8. Where is our spaceport located?</p>
+        <ul class="options">
+          <li><input type="radio" name="q8" value="A" /> Cape Canaveral</li>
+          <li><input type="radio" name="q8" value="B" /> Baikonur</li>
+          <li><input type="radio" name="q8" value="C" /> Houston</li>
+        </ul>
+      </div>
+
+      <div class="question" id="q9">
+        <p>9. How long does it take to travel to Titan?</p>
+        <ul class="options">
+          <li><input type="radio" name="q9" value="A" /> 7 years</li>
+          <li><input type="radio" name="q9" value="B" /> 3 years</li>
+          <li><input type="radio" name="q9" value="C" /> 9 months</li>
+        </ul>
+      </div>
+
+      <div class="question" id="q10">
+        <p>10. What type of vehicle is used to launch payloads into space?</p>
+        <ul class="options">
+          <li><input type="radio" name="q10" value="A" /> Launch Vehicle</li>
+          <li><input type="radio" name="q10" value="B" /> Space Capsule</li>
+          <li><input type="radio" name="q10" value="C" /> Spaceport</li>
+        </ul>
+      </div>
+
+      <button type="button" class="submit-btn" onclick="checkAnswers()">Submit</button>
+      <div class="result"></div>
+    </div>
+
+    <script>
+      const toHomePage = () => {
+        window.location.href = "/"
+      }
+
+      function checkAnswers() {
+
+        
+      const answers = {
+        q1: 'A', q2: 'A', q3: 'A', q4: 'A', q5: 'A',
+        q6: 'A', q7: 'A', q8: 'A', q9: 'A', q10: 'A'
+      };
+      let score = 0;
+
+      for (let key in answers) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === answers[key]) {
+          score++;
+        }
+      }
+
+      const resultDiv = document.querySelector('.result');
+      resultDiv.textContent = `You scored ${score} out of 10!`;
+    }
+    </script>
+  </body>
+</html>

@@ -1,3 +1,9 @@
+const toTestPage = (event) => {
+  event = event || window.event
+  event.preventDefault()
+  window.location.href = "pages/test.html"
+}
+
 const route = (event) => {
   event = event || window.event
   event.preventDefault()
