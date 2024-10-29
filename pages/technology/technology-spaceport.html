@@ -1,32 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="../../style/technology.css" />
 </head>
-<body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+<style>
+  #spaceport {
+    background-color: white;
+    color: black;
+  }
+</style>
 
-  03 Space launch 101
-
-  1
-  2
-  3
-
-  The terminology...
-  Spaceport
-
-  A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
-  by analogy to the seaport for ships or airport for aircraft. Based in the 
-  famous Cape Canaveral, our spaceport is ideally situated to take advantage 
-  of the Earth’s rotation for launch.
-</body>
-</html>
+<div class="main">
+  <header>
+    <h5><span>03</span> SPACE LAUNCH 101</h5>
+  </header>
+  <div class="content">
+    <section class="left-section">
+      <nav>
+        <a onclick="route()" href="/technology-vehicle">1</a>
+        <a onclick="route()" href="/technology-spaceport" id="spaceport">2</a>
+        <a onclick="route()" href="/technology-capsule">3</a>
+      </nav>
+      <article>
+        <h6>THE TERMINOLOGY...</h6>
+        <h3>SPACEPORT</h3>
+        <p>
+          A spaceport or cosmodrome is a site for launching (or receiving)
+          spacecraft, by analogy to the seaport for ships or airport for
+          aircraft. Based in the famous Cape Canaveral, our spaceport is ideally
+          situated to take advantage of the Earth’s rotation for launch.
+        </p>
+      </article>
+    </section>
+    <section class="right-section">
+      <picture>
+        <source
+          srcset="../../assets/technology/image-spaceport-landscape.jpg"
+          media="(max-width: 1024px) and (orientation: portrait)" />
+        <img
+          src="../../assets/technology/image-spaceport-portrait.jpg"
+          alt="" />
+      </picture>
+    </section>
+  </div>
+</div>
