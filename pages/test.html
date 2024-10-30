@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="../style/test.css" />
   </head>
   <body>
-    <button class="left" onclick="toHomePage()">x</button>
+    <header class="header">
+      <button class="left" onclick="toHomePage()">Back</button>
+      <span class="history" onclick="showRecords()">History</span>
+    </header>
+    <div id="records"></div>
     <div class="quiz-container">
       <h2 class="quiz-title">Space Quiz</h2>
 
@@ -106,34 +110,81 @@
         </ul>
       </div>
 
-      <button type="button" class="submit-btn" onclick="checkAnswers()">Submit</button>
-      <div class="result"></div>
+      <button type="button" class="submit-btn" onclick="checkAnswers()">
+        Submit
+      </button>
+      <div>You scored <span class="result"></span> out of 10!</div>
     </div>
 
     <script>
+      var show = false
+
+      const showRecords = (e) => {
+        console.log("any")
+        if (!show) {
+          document.getElementById("records").style.display = "inline"
+          show = true
+        } else {
+          document.getElementById("records").style.display = "none"
+          show = false
+        }
+
+        const recordsDiv = document.getElementById("records")
+        recordsDiv.innerHTML = ''
+
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i)
+          const value = localStorage.getItem(key)
+
+          let parsedValue
+          try {
+            parsedValue = JSON.parse(value)
+          } catch {
+            parsedValue = value
+          }
+
+          const record = document.createElement("div")
+          record.textContent = `${key}: ${JSON.stringify(parsedValue)}`
+          recordsDiv.appendChild(record)
+        }
+      }
+
       const toHomePage = () => {
         window.location.href = "/"
       }
 
       function checkAnswers() {
-
-        
-      const answers = {
-        q1: 'A', q2: 'A', q3: 'A', q4: 'A', q5: 'A',
-        q6: 'A', q7: 'A', q8: 'A', q9: 'A', q10: 'A'
-      };
-      let score = 0;
-
-      for (let key in answers) {
-        const selected = document.querySelector(`input[name="${key}"]:checked`);
-        if (selected && selected.value === answers[key]) {
-          score++;
+        const answers = {
+          q1: "A",
+          q2: "A",
+          q3: "A",
+          q4: "A",
+          q5: "A",
+          q6: "A",
+          q7: "A",
+          q8: "A",
+          q9: "A",
+          q10: "A",
         }
-      }
+        let score = 0
 
-      const resultDiv = document.querySelector('.result');
-      resultDiv.textContent = `You scored ${score} out of 10!`;
-    }
+        for (let key in answers) {
+          const selected = document.querySelector(
+            `input[name="${key}"]:checked`
+          )
+          if (selected && selected.value === answers[key]) {
+            score++
+          }
+        }
+
+        const resultDiv = document.querySelector(".result")
+        resultDiv.textContent = `${score}`
+
+        let timestamp = Date.now()
+        // const timestamp = 1730315264395;  // Your timestamp
+        const date = new Date(timestamp);
+        localStorage.setItem(`${date.toLocaleString()}`, `${score} points`)
+      }
     </script>
   </body>
 </html>
